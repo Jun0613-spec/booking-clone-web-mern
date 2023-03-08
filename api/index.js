@@ -27,11 +27,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
-app.use(
-  cors({
-    origin: process.env.REACT_APP_URL,
-  })
-);
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
@@ -53,5 +49,5 @@ app.use((err, req, res, next) => {
 
 app.listen(process.env.PORT, () => {
   connect();
-  console.log("The server is working on the port");
+  console.log("The server is working on the" + `${process.env.PORT}`);
 });

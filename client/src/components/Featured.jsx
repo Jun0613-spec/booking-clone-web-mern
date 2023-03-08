@@ -2,7 +2,7 @@ import useFetch from "../hooks/useFetch";
 
 const Featured = () => {
   const { data, loading } = useFetch(
-    "/hotels/countByCity?cities=london,manchester,edinburgh"
+    `${process.env.REACT_APP_BASE_URL}/hotels/countByCity?cities=london,manchester,edinburgh`
   );
 
   return (

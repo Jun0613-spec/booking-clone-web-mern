@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const FeaturedProperties = () => {
-  const { data, loading, error } = useFetch("/hotels?featured=true");
+  const { data, loading } = useFetch(
+    `${process.env.REACT_APP_BASE_URL}/hotels?featured=true`
+  );
 
   return (
     <div className="w-full max-w-screen-lg flex justify-between gap-5">
@@ -12,13 +13,12 @@ const FeaturedProperties = () => {
         <>
           {data.map((item) => (
             <div className="flex-1 gap-2.5 flex flex-col" key={item._id}>
-              <Link to={`/hotels/${item._id}`}>
-                <img
-                  src={item.photos[0]}
-                  alt=""
-                  className="w-full h-60 object-cover"
-                />
-              </Link>
+              <img
+                src={item.photos[0]}
+                alt=""
+                className="w-full h-60 object-cover"
+              />
+
               <span className="text-gray-600 font-bold">{item.name}</span>
               <span className="capitalize">{item.city}</span>
               <span className="font-medium">
