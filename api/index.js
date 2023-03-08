@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.SERVER_PORT, () => {
   connect();
-  console.log("The server is working on the" + `${process.env.PORT}`);
+  console.log("The server is working on the" + `${process.env.SERVER_PORT}`);
 });
