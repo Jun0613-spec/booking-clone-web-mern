@@ -51,7 +51,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   connect();
-  console.log("The server is working on port 5000");
+  console.log("The server is working on the port");
 });
