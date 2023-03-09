@@ -9,9 +9,11 @@ import useFetch from "../hooks/useFetch";
 
 const List = () => {
   const location = useLocation();
+  // eslint-disable-next-line no-unused-vars
   const [destination, setDestination] = useState(location.state.destination);
   const [dates, setDates] = useState(location.state.dates);
   const [openDate, setOpenDate] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [options, setOptions] = useState(location.state.options);
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
