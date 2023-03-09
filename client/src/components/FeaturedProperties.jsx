@@ -16,7 +16,7 @@ const FeaturedProperties = () => {
               <img
                 src={item.photos[0]}
                 alt=""
-                className="w-full h-60 object-cover"
+                className="w-full h-60 object-cover rounded-md"
               />
 
               <span className="text-gray-600 font-bold">{item.name}</span>

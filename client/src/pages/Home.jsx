@@ -13,9 +13,13 @@ const Home = () => {
       <Header />
       <div className="flex flex-col items-center gap-7 mt-12">
         <Featured />
-        <h1 className="w-full sm:text-xl sm:ml-56">Browse by property type</h1>
+        <h1 className="w-full max-w-screen-lg flex justify-between text-xl font-bold md:text-2xl">
+          Browse by property type
+        </h1>
         <PropertyList />
-        <h1 className="w-full sm:text-xl sm:ml-56">Homes guests love</h1>
+        <h1 className="w-full max-w-screen-lg flex justify-between text-xl font-bold md:text-2xl">
+          Homes guests love
+        </h1>
         <FeaturedProperties />
         <MailList />
         <Footer />
